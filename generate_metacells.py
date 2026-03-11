@@ -85,7 +85,7 @@ def generate_metacells(adata_path: str, out_dir: str, output_name: str, n_target
 
 
 def _fallback_metacells(adata_raw, n_cells, n_target, var_names):
-    """Simple sum-aggregation fallback when pyviper repr_metacells fails."""
+    #Simple sum-aggregation fallback when pyviper repr_metacells fails.
     n_mc = max(1, int(n_cells / n_target))
     groups = np.array_split(np.arange(n_cells), n_mc)
     metacells = []
